@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+<h1 class= "text-center">Restaurants</h1></div>
+
+
+<div class = "container bg-light text-center" id="restaurants">
+  <% @restaurants.each do |restaurant| %>
+    <%= render restaurant %>
+    <p>
+    <div class = "text-center mb-2"><%= link_to "Show this restaurant", restaurant %></div>
+
+    </p>
+  <% end %>
+
+</div>
+<div class= "d-grid btn btn-info col-2 mx-auto"><%= link_to "New restaurant", new_restaurant_path %></div>
